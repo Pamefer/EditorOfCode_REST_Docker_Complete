@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+        {% load static %}
+		<title>Programandoooooooo en Línea</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{STATIC_URL}}static/assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<img src="{{STATIC_URL}}static/images/user.png" alt="" WIDTH="60" HEIGHT="60" align="left" />
+
+                            <h1 id="title">{{ user.username }}</h1>
+							<p>Hyperspace Engineer</p>
+						</div>
+
+					<!-- Nav -->
+
+                {% url 'salir' as salir %}
+						<nav id="nav">
+
+							<ul>
+
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li ><a href="/programar" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Programar</span></a></li>
+{#								<li class="{% add_active request 'programar' 1 %}"><a  href="#portfolio">Programar</a></li>#}
+                                <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Mis Programas</span></a></li>
+								<li><a href="{{ salir }}" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Salir</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+                {% block script %}
+                {% endblock %}
+                {% block estilos %}
+                {% endblock %}
+
+                {% block scriptcompilador %}
+                {% endblock %}
+                {% block scriptcompilador2 %}
+                {% endblock %}
+
+                {% block contenido %}
+                {% endblock %}
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Derechos Reservados.</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{STATIC_URL}}static/assets/js/jquery.min.js"></script>
+			<script src="{{STATIC_URL}}static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="{{STATIC_URL}}static/assets/js/jquery.scrollzer.min.js"></script>
+			<script src="{{STATIC_URL}}static/assets/js/skel.min.js"></script>
+			<script src="{{STATIC_URL}}static/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{STATIC_URL}}static/assets/js/main.js"></script>
+
+	</body>
+</html>

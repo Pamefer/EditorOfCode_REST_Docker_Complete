@@ -1,0 +1,48 @@
+---------------------Instalar Python ambientes----------
+su apt-get python-setuptools
+su apt-get python-dev
+
+#instalar librerias de python
+su easy_install pip
+su pip install virtualenv
+
+#crear entrno
+virtualenv nombre
+
+#activar entorno virtual
+source nombre/bin/activate
+
+#bajar..requerimientos para el entorno
+http://bit.ly/2jrigUm
+#ejecutar
+pip install -e requirements.txt
+-----------Crear Proyecto Django-----------------
+mkdir proy
+cd proy
+django-admin startproject institucion
+cd institucion
+python maenage.py startapp escuela
+
+#modificar models, admin, settings
+https://goo.gl/vpLD5h
+
+python manage.py makemigrations escuela
+python manage.py migrate
+python manage.py runserver
+
+python manage.py createsuperuser
+copiar codigos de :  https://goo.gl/vpLD5h
+
+---
+postman-?para ver rest
+
+-------------------Cliente------------
+instalar apache
+su apt-get install apache2
+su apache2 start
+a2enmod userdir
+su apache2 restart
+
+crear carpeta public_html
+dentro https://www.dropbox.com/s/i4ltpwdliz95ode/app-consumo-1.tar.gz?dl=0
+(En firefox)

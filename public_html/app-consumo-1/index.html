@@ -1,0 +1,242 @@
+<!--<!DOCTYPE html>-->
+<!--<html ng-app='myApp'>-->
+<!--<head>-->
+	<!--<title></title>-->
+	<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
+	<!--&lt;!&ndash;Controllers&ndash;&gt;-->
+	<!--<script type="text/javascript" src="controllers/testController.js"></script>-->
+	<!--&lt;!&ndash;Services&ndash;&gt;-->
+	<!--<script type="text/javascript" src="services/testService.js"></script>-->
+<!--</head>-->
+<!--<body ng-app="myApp" ng-controller="testController">-->
+	<!--<input type="submit" value="Todos los posts" ng-click="getAllCodigos()"/>-->
+	<!--<input type="submit" value="Un post" ng-click="getCodigo()"/>-->
+	<!--&lt;!&ndash;<a href="" ng-click="getAllCodigos()">siiiiiiiiiiiiiii</a>&ndash;&gt;-->
+	<!--<input type="text" ng-model="post_id" placeholder="inserte el id del post"/>-->
+    <!--<hr/>-->
+  	<!--<input type="submit" value="Elimine post" ng-click="deletecod(post_id_delete)"/>-->
+	<!--<input type="text" ng-model="post_id_delete" placeholder="inserte el id del post"/>-->
+<!--<hr/>-->
+  <!--<form novalidate class="simple-form">-->
+
+	  <!--<label class="campo">Id Usuario	: <input class = "caja" type="text" ng-model="a.id_usuario" /></label><br />-->
+	  <!--<label class="campo">Nombre codigo 	: <input class = "caja2" type="text" ng-model="a.enlace" /></label><br />-->
+	  <!--<label class="campo">Codigo 	: <input class = "caja3" type="text" ng-model="a.codigodes" /></label><br />-->
+	  	  <!--<label class="campo">Fecha 	: <input class = "caja4" type="text" ng-model="a.referencia" /></label><br />-->
+
+	  <!--&lt;!&ndash;<input type="button" ng-click="reset()" value="Reset" />&ndash;&gt;-->
+	  <!--<input type="submit" ng-click="crear(id_usuario)" value="Guardar" />-->
+  <!--</form>-->
+  <!--<hr/>-->
+  <!--<div ng-if="posts.exist==1">-->
+		<!--<h1>Códigos de los usuarios</h1>-->
+
+
+
+	<!--<div ng-repeat="p in posts">-->
+
+		<!--<tbody>-->
+		<!--<pre>-->
+
+	  <!--<table style="width:100%" >-->
+
+		<!--<thead>-->
+		<!--<tr>-->
+			<!--<th>Id Codigo:</th>-->
+			<!--<th>Usuario</th>-->
+			<!--<th>Nombre de Codigo</th>-->
+			<!--<th>Codigo</th>-->
+			<!--<th>Fecha</th>-->
+		<!--</tr>-->
+		<!--</thead>-->
+				  <!--<tr>-->
+					<!--<td>{{p.idcodigo}}</td>-->
+					<!--<td>{{p.id_usuario}}</td>-->
+					<!--<td>{{p.enlace}}</td>-->
+					  <!--<td>{{p.codigodes}}</td>-->
+					  <!--<td>{{p.referencia}}</td>-->
+
+				  <!--</tr>-->
+		<!--</tbody>-->
+
+
+<!--</table>-->
+	  <!--</pre>-->
+  <!--</div>-->
+
+
+	<!--</div>-->
+
+
+<!--<div ng-if="unPost.exist==1">-->
+
+	<!--<h1>Obteniendo un codigo en especifico</h1>-->
+		<!--<pre>-->
+		<!--<h3 class="tit"> Id Codigo: {{unPost.idcodigo}}</h3>-->
+				<!--<h4> Id Usuario: {{unPost.id_usuario}}		Nombre de Codigo:{{unPost.enlace}}</h4>-->
+				<!--<h4> Codigo :{{unPost.codigodes}}	</h4>-->
+			    <!--<h4> Fecha :{{unPost.referencia}}	</h4>-->
+				<!--<h5>{{unPost}}</h5>-->
+		<!--</pre>-->
+<!--</div>-->
+	<!--<div ng-if="unPost.exist==1">-->
+		<!--<h2>Modificar un Post</h2>-->
+		<!--<form novalidate class="simple-form">-->
+
+			<!--<label class="campo">Id Usuario	: <input class = "caja" type="text"    data-ng-model="unPost.id_usuario"  /></label><br />-->
+			<!--<label class="campo">Nombre codigo: <input class = "caja2" type="text" data-ng-model="unPost.enlace" /></label><br />-->
+			<!--<label class="campo">Codigo 	: <input class = "caja3" type="text" data-ng-model="unPost.codigodes" /></label><br />-->
+			<!--<label class="campo">Referencia 	: <input class = "caja4" type="text" data-ng-model="unPost.referencia" /></label><br />-->
+
+			<!--&lt;!&ndash;<input type="button" ng-click="reset()" value="Reset" />&ndash;&gt;-->
+			<!--<input type="submit" ng-click="actualizar(unPost.id_usuario, unPost.enlace, unPost.codigodes, unPost.referencia)" value="Modificar" />-->
+			<!--<h4>{{mensaje}}</h4>-->
+		<!--</form>-->
+
+<!--</div>-->
+	<!--<hr/>-->
+
+
+
+
+<!--</body>-->
+<!--</html>-->
+<!--http://localhost/~pamela/app-consumo-1/-->
+
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<!--Controllers-->
+	<script type="text/javascript" src="controllers/testController.js"></script>
+	<!--Services-->
+	<script type="text/javascript" src="services/testService.js"></script>
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<style>
+		div.container{
+			margin: 30px 20px;
+		}
+		body{
+			background-color: rgba(163, 168, 245, 0.42);
+			margin: 0px;
+			padding: 0px;
+
+		}
+		nav.rest{
+			background-color: rgba(0, 0, 0, 0.99);
+			text-align: center;
+			margin-top: 0px;
+			padding: 10px 0px;
+		}
+		nav h1{
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="testController">
+<nav class="rest"><h1>REST</h1></nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- It can be fixed with bootstrap affix http://getbootstrap.com/javascript/#affix-->
+            <div id="sidebar" class="well sidebar-nav">
+                <h5><i class="glyphicon glyphicon-home"></i>
+                    <small><b>REST CODIGO</b></small>
+                </h5>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#" ng-click="getAllCodigos()">Mostrar Todos</a></li>
+					<br>
+					<label for="">Buscar/Actualizar/Eliminar</label>
+					<li><input type="text" ng-model="post_id" placeholder="Ingrese ID"/></li>
+					<li><a style="text-align: right" href="#" ng-click="getCodigo()">Buscar o Actualizar</a></li>
+					<li><a style="text-align: right" href="#" ng-click="deletecod(post_id)">Eliminar</a>
+						<label for="">Guardar Codigo</label>
+						<form novalidate class="simple-form">
+							<input class = "caja" type="text" ng-model="a.id_usuario" placeholder="Id Usuario"/><br />
+							 <input class = "caja2" type="text" ng-model="a.enlace" placeholder="Nombre codigo"/><br />
+							 <input class = "caja3" type="text" ng-model="a.codigodes" placeholder="Codigo"/><br />
+							 <input class = "caja4" type="text" ng-model="a.referencia" placeholder="Fecha"/><br />
+					        <li style="text-align: right"><a style="text-align: right" href="#" ng-click="crear(id_usuario)">Guardar</a></li>
+
+						</form>
+
+					<div ng-if="unPost.exist==1">
+						<h2>Modificar un Post</h2>
+						<form novalidate class="simple-form">
+
+							<label class="campo">Id Usuario	: <input class = "caja" type="text"    data-ng-model="unPost.id_usuario"  /></label><br />
+							<label class="campo">Nombre codigo: <input class = "caja2" type="text" data-ng-model="unPost.enlace" /></label><br />
+							<label class="campo">Codigo 	: <input class = "caja3" type="text" data-ng-model="unPost.codigodes" /></label><br />
+							<label class="campo">Referencia 	: <input class = "caja4" type="text" data-ng-model="unPost.referencia" /></label><br />
+
+							<!--<input type="button" ng-click="reset()" value="Reset" />-->
+							<input type="submit" ng-click="actualizar(unPost.id_usuario, unPost.enlace, unPost.codigodes, unPost.referencia)" value="Modificar" />
+							<h4>{{mensaje}}</h4>
+						</form>
+
+					</div>
+
+				</ul>
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div ng-if="posts.exist==1">
+				<h1>Codigos de los usuarios</h1>
+				<div ng-repeat="p in posts">
+
+					<tbody>
+					<pre>
+
+						  <table style="width:100%" >
+
+							<thead>
+							<tr>
+								<th>Id Codigo:</th>
+								<th>Usuario</th>
+								<th>Nombre de Codigo</th>
+								<th>Codigo</th>
+								<th>Fecha</th>
+							</tr>
+							</thead>
+							  <tbody>
+							  <tr>
+								<td>{{p.idcodigo}}</td>
+								<td>{{p.id_usuario}}</td>
+								<td>{{p.enlace}}</td>
+								  <td>{{p.codigodes}}</td>
+								  <td>{{p.referencia}}</td>
+				  				</tr>
+							  </tbody>
+						  </table>
+	  				</pre>
+				</div>
+			</div>
+			<div ng-if="unPost.exist==1">
+				<h1>Obteniendo un codigo en especifico</h1>
+				<pre>
+				<h3 class="tit"> Id Codigo: {{unPost.idcodigo}}</h3>
+						<h4> Id Usuario: {{unPost.id_usuario}}		Nombre de Codigo:{{unPost.enlace}}</h4>
+						<h4> Codigo :{{unPost.codigodes}}	</h4>
+						<h4> Fecha :{{unPost.referencia}}	</h4>
+						<h5>{{unPost}}</h5>
+				</pre>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

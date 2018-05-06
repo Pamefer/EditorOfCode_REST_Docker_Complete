@@ -1,0 +1,9 @@
+section#izq{
+    width: 50%;
+}
+section#der{
+    width: 50%;
+}
+section#izq, section#der{
+    display: inline-block;
+}

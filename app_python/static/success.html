@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://repl.it/lib/api.js"></script>
+    <script type="application/javascript">
+        TOKEN   = { time_created: 1485157877000,
+            msg_mac: 'sc3JMUOovIp2Hqdd51TK5szQROZyvl+Q1rUkTksEl+U=' }
+        var repl = new ReplitClient('api.repl.it', '80', 'python',TOKEN);
+        repl.connect().then(
+                function() {
+                    document.querySelector('.status').innerHTML = 'connected';
+                    start();
+                },
+                function() {
+                    document.querySelector('.status').innerHTML = 'failed';
+                }
+        );
+
+        function start() {
+            document.querySelector('button').onclick = function() {
+                repl.evaluate(
+                        document.querySelector('.co').value,
+                        {
+                            stdout: function(str) {
+                                document.querySelector('.out').innerHTML += str + '\n';
+                            }
+                        }
+                ).then(
+                        function(result) {
+                            document.querySelector('.result').innerHTML += (result.error || result.data) + '\n';
+                        },
+                        function(err) {
+                            console.error(err);
+                        }
+                );
+            };
+        }
+    </script>
+
+
+    <script src="{{STATIC_URL}}static/codemirror/lib/codemirror.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/assets/js/jquery.min.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/lib/codemirror.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/mode/python/python.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/mode/css/css.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/hint/show-hint.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/hint/css-hint.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/selection/active-line.js"></script>
+    {#PAginade temas#}
+    {#https://codemirror.net/demo/theme.html#}
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/theme/base16-dark.css">
+
+    {#ambiance#}
+    {#dessdeeeeeeeee#}
+
+</head>
+<body>
+
+<div class="status">connecting..</div>
+<form action="#" method="POST">
+
+    {#        <label for="id_id_usuario"><small></small></label>{{form.id_usuario}}<br>#}
+    <p><label for="id_enlace">Enlace:</label> <input id="id_enlace" maxlength="500" name="enlace" type="text" required /></p>
+    {#        <p><label for="id_codigodes">Codigodes:</label> <input id="id_codigodes" class="id_codigodes" maxlength="1000" name="codigodes" type="text" required /></p>#}
+    {#    <textarea id="co" class="co" name="coso"></textarea>#}
+    <textarea id="co" class="co" maxlength="1000" name="co" type="text" required></textarea>
+
+
+    <input type="submit" value="submit">
+</form>
+
+<pre class="result">results: </pre>
+<pre class="out">output: </pre>
+<button>run</button>
+
+
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("co"), {
+        theme:'base16-dark',
+        mode: {name: "python",
+            version: 2,
+            singleLineStringErrors: true},
+        lineNumbers: true,
+        styleActiveLine: true,
+        indentUnit: 4,
+        extraKeys:  {"Ctrl-Space": "autocomplete"},
+        matchBrackets: true
+
+    });
+
+</script>
+</body>
+</html>

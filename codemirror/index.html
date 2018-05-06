@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="plugin/codemirror/lib/codemirror.css">
+</head>
+<body>
+	<textarea class="co">
+
+</textarea>
+<script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="application/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
+<script>
+	$(document).ready(function(){
+    var code=$(".co")[0];
+    var editor= CodeMirror.fromTextArea(code,{lineNumbers:true, mode:"javascript"});
+});
+//	var editor= CodeMirror(document.getElementById("co"), {
+//		value: "function test function(){\n \nalert('helo');\n\t return true; \n}",
+//		mode:"javascript",
+//		theme:"neo"
+//	});
+
+</script>
+</body>
+</html>

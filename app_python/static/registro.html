@@ -1,0 +1,62 @@
+ {% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proyecto Aplicaciones</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Magical Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{{STATIC_URL}}static/static/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- //Custom Theme files -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+
+
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+
+
+				<form action="#" method="post">
+                    {% csrf_token %}
+                            		<h1  align="center">Registro</h1>
+
+                  <input autofocus="" class="text" id="id_username" name="username" placeholder="Nombre de usuario" type="text" required />{{ user_form.username.errors }}
+                    <input class="text" id="id_email" name="email" placeholder="Email"  type="text" required />{{ user_form.email.errors }}
+                    <input class="text" id="id_password1" name="password1" placeholder="Contrasenia" type="password" required />{{ user_form.password1.errors }}
+                    <input class="text" id="id_password2" name="password2" placeholder="Repetir contrasenia" type="password" required />{{ user_form.password2.errors }}
+                    {#                                            						        {{ user_form.as_p }}#}
+
+
+					<input type="submit" value="REGISTRAR">
+				</form>
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="w3copyright-agile">
+			<p> Derechos Reservados por @Pamm</p>
+		</div>
+		<!-- //copyright -->
+		<ul class="w3lsg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>

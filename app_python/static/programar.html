@@ -1,0 +1,395 @@
+{% extends "base.html" %}
+
+{% block estilos %}
+    <style>
+    body {
+{#	background: #0a001f;#}
+        background: #0a001f;
+	background: -webkit-linear-gradient(to bottom right, #0a001f 80%, #6439af 50%);
+	background: linear-gradient(to bottom right, #0a001f 90%, #6439af 50%);
+	background-size:cover;
+	background-attachment: fixed;
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+.w3lsg-bubbles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.w3lsg-bubbles li {
+	position: absolute;
+	list-style: none;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.15);
+	bottom: -160px;
+	-webkit-animation: square 25s infinite;
+	-moz-animation: square 25s infinite;
+	-o-animation: square 25s infinite;
+	-ms-animation: square 25s infinite;
+	animation: square 25s infinite;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+	-ms-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+.w3lsg-bubbles li:nth-child(1) {
+	left: 10%;
+}
+.w3lsg-bubbles li:nth-child(2) {
+	left: 20%;
+	width: 80px;
+	height: 80px;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	animation-delay: 2s;
+	-webkit-animation-duration: 17s;
+	-moz-animation-duration: 17s;
+	-o-animation-duration: 17s;
+	animation-duration: 17s;
+}
+.w3lsg-bubbles li:nth-child(3) {
+	left: 25%;
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	-o-animation-delay: 4s;
+	-ms-animation-delay: 4s;
+	animation-delay: 4s;
+}
+.w3lsg-bubbles li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	-webkit-animation-duration: 22s;
+	-moz-animation-duration: 22s;
+	-o-animation-duration: 22s;
+	-ms-animation-duration: 22s;
+	animation-duration: 22s;
+	background-color: rgba(255, 255, 255, 0.25);
+}
+.w3lsg-bubbles li:nth-child(5) {
+	left: 70%;
+}
+.w3lsg-bubbles li:nth-child(6) {
+	left: 80%;
+	width: 120px;
+	height: 120px;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	animation-delay: 3s;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.w3lsg-bubbles li:nth-child(7) {
+	left: 32%;
+	width: 160px;
+	height: 160px;
+	-webkit-animation-delay: 7s;
+	-moz-animation-delay: 7s;
+	-o-animation-delay: 7s;
+	-ms-animation-delay: 7s;
+	animation-delay: 7s;
+}
+.w3lsg-bubbles li:nth-child(8) {
+	left: 55%;
+	width: 20px;
+	height: 20px;
+	-webkit-animation-delay: 15s;
+	-moz-animation-delay: 15s;
+	animation-delay: 15s;
+	-webkit-animation-duration: 40s;
+	-moz-animation-duration: 40s;
+	animation-duration: 40s;
+}
+.w3lsg-bubbles li:nth-child(9) {
+	left: 25%;
+	width: 10px;
+	height: 10px;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	-webkit-animation-duration: 40s;
+	animation-duration: 40s;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.w3lsg-bubbles li:nth-child(10) {
+	left: 90%;
+	width: 160px;
+	height: 160px;
+	-webkit-animation-delay: 11s;
+	animation-delay: 11s;
+}
+@-webkit-keyframes square {
+	0% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-700px) rotate(600deg);
+		-moz-transform: translateY(-700px) rotate(600deg);
+		-o-transform: translateY(-700px) rotate(600deg);
+		-ms-transform: translateY(-700px) rotate(600deg);
+		transform: translateY(-700px) rotate(600deg);
+	}
+}
+@keyframes square {
+	0% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-700px) rotate(600deg);
+		-moz-transform: translateY(-700px) rotate(600deg);
+		-o-transform: translateY(-700px) rotate(600deg);
+		-ms-transform: translateY(-700px) rotate(600deg);
+		transform: translateY(-700px) rotate(600deg);
+	}
+}
+        div.containers{
+            display: inline-block;
+            width: 100%;
+            padding: 0px;
+            margin-top: 20px;
+
+        }
+        section#izq{
+            width: 60%;
+            height: 100%;
+            float: left;
+            margin-left: 8px;
+            margin-top: 50px;
+        }
+        section#der{
+            width: 35%;
+            height: 100%;
+            float: right;
+            margin:30px 8px 0 10px;
+
+
+        }
+        section#der,section#izq{
+            padding:0px;
+            text-align: left;
+
+        }
+
+        #main > section.one {
+            padding: 1em 0;
+        }
+        #resul1,#resul2{
+            border-radius: 7px;
+            font-size: 0.8em;
+            color: #1d1d1b;
+            padding: 3px 12px;
+        }
+    #resul1{
+        margin-bottom: 10px;
+    }
+    input#id_enlace{
+        font-size: 1em;
+        padding: 0.3em;
+        margin-bottom: 4px;
+        color: #0a001f;
+    }
+    button#button1, button#button2{
+        padding: 4px 30px;
+        font-size: 0.6em;
+        background: #6439af;
+    }
+    h2, label{
+        font: bold;
+        color: #ddeeff;
+    }
+    textarea{
+        color: #0a001f;
+        font-size: 0.9em;
+;
+    }
+
+    </style>
+{% endblock %}
+{% block scriptcompilador %}
+    <script src="{{STATIC_URL}}static/codemirror/lib/codemirror.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/assets/js/jquery.min.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/lib/codemirror.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/mode/python/python.js"></script>
+    <script type="application/javascript" src="{{STATIC_URL}}static/codemirror/mode/css/css.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/hint/show-hint.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/hint/css-hint.js"></script>
+    <script src="{{STATIC_URL}}static/codemirror/addon/selection/active-line.js"></script>
+    {#PAginade temas#}
+    {#https://codemirror.net/demo/theme.html#}
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/addon/hint/show-hint.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}static/codemirror/theme/base16-dark.css">
+
+        <script type="text/javascript">
+    var op="";
+        $(document).ready(function(){
+            $("#id_idlenguaje").change(function(){
+                var op = $("#id_idlenguaje option:selected").val();
+                $('#capa').html(op);
+            });
+        });
+    </script>
+
+
+{% endblock %}
+
+{% block contenido %}
+{#    <section id="top" >#}
+    <div class="containers">
+        <div><h2 align="center">Compila aquí tu Código</h2></div>
+        <section id="izq">
+                <button id="button2" style="float:right"><i class="fa fa-play"> </i>  RUN</button>
+
+            <form id="formula" action="#" method="POST" >{% csrf_token %}
+
+                {% for hidden in form.hidden_fields %}
+                    {{ hidden }}
+                {% endfor %}
+                <label id= "id_enlace" for="id_enlace">Nombre del programa:</label> <input id="id_enlace" maxlength="500" name="enlace" type="text" required />
+                <label for="dd">Código:</label>
+                    <textarea id="id_codigodes" class="id_codigodes" maxlength="900" name="codigodes"  required></textarea>
+{#              {{ form.as_p }}#}
+
+                <label for="id_idlenguajee">Lenguaje:</label>
+                    <select id="id_idlenguaje" name="idlenguaje">
+                        <option value={{ form.idlenguaje }}>{{ form.lenguaje }}</option>
+                    </select>
+{#                            <input id="capa" type="text" value="" />#}
+
+               <button type="submit" id="button1" class="page-scroll btn btn-xl"><i class="fa fa-save"></i> GUARDAR</button>
+            </form>
+                    <div class="status">connecting..</div>
+        </section>
+        <section id="der" >
+            <label>Errores:</label>
+            <div id='resul1' class="result alert-danger" role="alert">
+                <a href="#" class="alert-link" style="color: #0a001f"></a>
+            </div>
+            <label>Resultado:</label>
+            <div id='resul2' class="out alert-info" role="alert" >
+                <a href="#" class="alert-link" style="color: #0a001f"></a>
+            </div>
+        </section>
+    </div>
+{#    </section>#}
+		<ul class="w3lsg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+{% endblock %}
+
+{#{% block scriptcompilador2 %}#}
+{#        <script>#}
+{##}
+{#        var editor = CodeMirror.fromTextArea(document.getElementById("id_codigodes"), {#}
+{#            theme:'base16-dark',#}
+{#            mode: {name: "python",#}
+{#                version: 2,#}
+{#                singleLineStringErrors: true},#}
+{#            lineNumbers: true,#}
+{#            styleActiveLine: true,#}
+{#            indentUnit: 4,#}
+{#            extraKeys:  {"Ctrl-Space": "autocomplete"},#}
+{#            matchBrackets: true#}
+{##}
+{#        });#}
+{##}
+{#    </script>#}
+{#{% endblock %}#}
+{% block script %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://repl.it/lib/api.js"></script>
+
+    <script type="application/javascript">
+
+            console.log("goooooooooo")
+
+        TOKEN   = { time_created: 1486945041000,
+        msg_mac: 'A34Pchpp4porYYr1sw57Fr/FLxCUQQJtGGleGc3l6Qk=' }
+{#OPcion1#}
+{#            function check(){#}
+{#                alert("Input box changed");#}
+{#                // Things to do when the textbox changes#}
+{#                        var e=document.getElementById("capa").text();#}
+{#            console.log(e);#}
+{##}
+{#            }#}
+{#            check();#}
+
+
+{#            Opcion2#}
+{# var opc = document.getElementById("id_idlenguaje");#}
+{#    var set_opc = opc.options[opc.selectedIndex].value;#}
+{#    console.log(set_opc);#}
+{##}
+{#    if(set_opc == 1){#}
+{#        repl = new ReplitClient('api.repl.it', '80', 'java', TOKEN);#}
+{#    } else if (set_opc == 2){#}
+{#        repl = new ReplitClient('api.repl.it', '80', 'ruby', TOKEN);#}
+{#    } else if (set_opc == 3){#}
+{#        repl = new ReplitClient('api.repl.it', '80', 'php', TOKEN);#}
+{#    } else {#}
+{#        repl = new ReplitClient('api.repl.it', '80', 'python', TOKEN);#}
+{#    }#}
+
+
+            var repl = new ReplitClient('api.repl.it', '80', 'python', TOKEN);
+
+        repl.connect().then(
+        function() {
+            document.querySelector('.status').innerHTML = 'connected';
+            start();
+        },
+        function() {
+            document.querySelector('status').innerHTML = 'failed';
+        }
+        );
+
+        function start() {
+            document.querySelector('button').onclick = function() {
+                repl.evaluate(
+                    document.querySelector('.id_codigodes').value,
+                     {
+
+                        stdout: function(str) {
+                            document.querySelector('.out').innerHTML += str + '\n';
+                        }
+                     }
+                ).then(
+                    function(result) {
+                        document.querySelector('.result').innerHTML += (result.error || result.data) + '\n';
+                    },
+                    function(err) {
+                        console.error(err);
+                    }
+                );
+            };
+        }
+    </script>
+
+{% endblock %}
